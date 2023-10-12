@@ -31,20 +31,22 @@ const generateNumber = function () {
 //NON FUNZIONANTE DA SISTEMARE (PARTE EXTRA DEL COMPITO)
 
 // const checkRandomNumber = function (number) {
-//   console.log("Sto controllando il numero");
-//   console.log(randomNumberHistory);
+//   if (randomNumberHistory.length === 0) {
+//     randomNumberHistory.push(number);
+//   } else {
+//     for (let i = 0; i < randomNumberHistory.length; i++) {
+//       console.log("sono nel for del controllo numero");
 
-//   for (let i = 0; i < randomNumberHistory.length; i++) {
-//     console.log("sono nel for del controllo numero");
-
-//     if (number === randomNumberHistory[i]) {
-//       console.log("Numero già utilizzato, rigenero un nuovo numero");
-//       const newNumber = generateNumber();
-//       checkRandomNumber(newNumber);
-//     } else {
-//       randomNumberHistory.push(number);
-//       console.log("Nuovo numero trovato");
-//       colorCell();
+//       if (randomNumberHistory[i] === number) {
+//         console.log("Numero già utilizzato, rigenero un nuovo numero");
+//         const newNumber = generateNumber();
+//         checkRandomNumber(newNumber);
+//       } else {
+//         console.log("Numero nuovo");
+//         console.log(randomNumberHistory);
+//         colorCell();
+//         // randomNumberHistory.push(number);
+//       }
 //     }
 //   }
 // };
@@ -73,8 +75,7 @@ generateNumberBtn.onclick = function () {
   randomNumber = generateNumber();
 
   //EXTRA NON FUNZIONANTE controllo se il numero generato è già stato precedentemente generato
-  //   console.log("Controllo il numero");
-  //   checkRandomNumber(randomNumber);
+  //checkRandomNumber(randomNumber);
 
   colorCell();
 };
